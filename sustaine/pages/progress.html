@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Progress</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css">
+<link rel="icon" type="image/x-icon" href="../images/favicon.png">
+<!--<script src="script.js"></script>-->
+<!--<script src="script2.js"></script>-->
+</head>
+<body>
+
+<!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="header"></div>
+
+  <div id="navbar">
+    <a href="../sustaine.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="submit.html">Submit</a>
+    <a href="research.html">Research</a>
+    <a class="active" href="progress.html">Progress</a>
+  </div>
+  
+
+<div class="width">
+<h1><a href="../sustaine.html">Sustaine</a></h1>
+<h2>Progress</h2>
+<p>
+   I'm currently updating the site with markers using <a hef="https://developers.google.com/maps/documentation/javascript?hl=en_US">Google's Map API</a>.
+   I've never worked with Google Developer resources before so it's been a little bit tedious, however, I got the hang of it and I've been using
+    <a href="https://developers.google.com/maps/documentation/javascript/markers#simple_icons">Google's marker documentation</a> as a resource for 
+    adding markers to my map.
+</p>
+<p>This is the code for how I'm adding markers using JavaScript:</p>
+
+<img src="../images/code.png" width="100%"></a>
+
+<p>
+    I made an array of markers called "markers" and each marker takes two variables called "coords" and "content" which takes in the location's coordinates 
+    and basic text information that appears on-click. I then loop through the array of markers and the function adds each marker to the map. I have to add 
+    all of this information for each location I want to mark with a marker.
+</p>
+
+</div>
+</div>
+
+<script>    
+function myFunction() {
+    if (window.pageYOffset >= sticky) {
+      navbar.classList.add("sticky")
+    } else {
+      navbar.classList.remove("sticky");
+    }
+  }
+
+
+ window.onscroll = function() {myFunction()};
+  
+ var navbar = document.getElementById("navbar");
+ var sticky = navbar.offsetTop;
+
+ function initMap(){
+	//map options
+	var options = {
+		zoom: 11,
+		center: {lat: 40.7128, lng: -74.0060} //nyc lat & lng
+	}
+	//new map
+	var map = new 
+	google.maps.Map(document.getElementById('map'), options);
+
+	/*
+	//add marker
+	var marker = new google.maps.Marker({
+		position: {lat: 40.714003, lng: -73.858929},
+		map:map
+	});
+
+	//text popup info window
+	var infoWindow =  new google.maps.InfoWindow({
+		content: '<h1>HELPSY</h1>'
+	})
+	//on click - shows text popup info window
+	marker.addListener('click', function(){
+		infoWindow.open(map, marker);
+	});
+	*/
+
+	//array of markers - add markers here
+	var markers = [
+		{
+			coords:{lat: 40.714003, lng: -73.858929},
+			content:'<h4>Vendor Name: Helpsy<br>Address: 75-41 Yellowstone Blvd<br>Phone: 718-275-3800<br>Email: Victor@helpsy.co<br>Website: https://www.helpsy.co<br>Accepting: Clothing, Shoes, Coats, Accessories, Bedding, Towels, Other</h4>'
+		},
+		{
+			coords:{lat: 40.763755, lng: -73.961792},
+			content:'<h4>Vendor Name: Housing Works<br>Address: 1222 2 Ave<br>Phone: 347-473-7400<br>Email: info@housingworks.org<br>Website: https://www1.nyc.gov/assets/donate/site/Directory/Details/29/74<br>Accepting: Clothing, Shoes, Coats, Accessories</h4>'
+		},
+		{
+			coords:{lat: 40.613489, lng: -74.12241},
+			content:'<h4>Vendor Name: Monkey Girlz Treasures Consignment Boutique<br>Address: 565 Manor Rd<br>Phone: 718-981-0706<br>Email: mkygirlz@gmail.com<br>Website: https://www1.nyc.gov/assets/donate/site/Directory/Details/77/123<br>Accepting: Contact store for details</h4>'
+		},
+        {
+			coords:{lat: 40.67218, lng: -73.9835},
+			content:'<h4>Vendor Name: Green Tree Textiles at Park Slopes Down to Earth Farmers Market<br>Address: 337 5 Ave<br>Phone: 908-245-9300<br>Email: info@greentreetextiles.org<br>Website: https://www1.nyc.gov/assets/donate/site/Directory/Details/507/999<br>Accepting: Clothing, Shoes, Accessories, Bedding, Linens, Towels, Coats</h4>'
+		},
+        {
+			coords:{lat: 40.806641, lng: -73.920227},
+			content:'<h4>Vendor Name: USAGAIN LLC<br>Address: 199 Brook Ave<br>Phone: 347-278-3253<br>Email: s.walsh@usagain.com<br>Website: http://www.usagain.com/<br>Accepting: Clothing, Shoes</h4>'
+		},
+
+	];
+
+	//loop through markers
+	for(var i = 0; i < markers.length; i++){
+		//add marker
+		addMarker(markers[i]);
+	}
+
+/*
+	addMarker({
+		coords:{lat: 40.714003, lng: -73.858929},
+		content:'<h3>Helpsy</h3>'
+	});
+*/
+	//add marker function
+	function addMarker(props){
+		var marker = new google.maps.Marker({
+			position: props.coords,
+			map:map,
+			//icon:props.iconImage
+		});
+
+		//check for custom icon
+		if(props.iconImage){
+			//set icon image
+			marker.setIcon(props.iconImage);
+		}
+
+		//check for content
+		if(props.content){
+			var infoWindow =  new google.maps.InfoWindow({
+				content:props.content
+			});
+			//on click - shows text popup info window
+			marker.addListener('click', function(){
+				infoWindow.open(map, marker);
+			});
+		}
+	}
+}
+
+ </script>
+    
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBOo0egIH6DL94gNcwfv4BNVhzHlujNGaE&callback=initMap"></script>
+</body>
+</html>
