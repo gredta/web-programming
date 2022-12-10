@@ -7,17 +7,12 @@
 <link rel="stylesheet" type="text/css" href="style.css">
 <link rel="icon" type="image/x-icon" href="images/favicon.png">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<!--<script src="script.js"></script>-->
-<!--<script src="script2.js"></script>-->
 </head>
+
 <body>
+<div class="header"></div>
 
-<!-- Load an icon library to show a hamburger menu (bars) on small screens -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<div class="header">
-</div>
-
-  <div id="navbar">
+<div id="navbar">
     <a class="active" href="sustaine.html">Home</a>
 	<div class="dropdown">
 		<button class="dropbtn">Boroughs
@@ -31,46 +26,96 @@
 		  <a href="pages/staten-island.html">Staten Island</a>
 		</div>
 	  </div> 
+	  <div class="dropdown">
+		<button class="dropbtn">Donate
+		  <i class="fa fa-caret-down"></i>
+		</button>
+		<div class="dropdown-content">
+		  <a href="pages/drop-off.html">Drop-Off</a>
+		  <a href="pages/mail-in.html">Mail-In</a>
+		  <a href="pages/pickup-services.html">Pickup Services</a>
+		</div>
+	  </div> 
     <a href="pages/about.html">About</a>
     <a href="pages/submit.html">Submit</a>
     <a href="pages/research.html">Research</a>
     <a href="pages/progress.html">Progress</a>
+	<a href="pages/contact.html">Contact</a>
+	</a>
   </div>
-  
+  <div class="content">
+	<div class="hamburger-menu">
+		<input id="menu__toggle" type="checkbox" />
+		<label class="menu__btn" for="menu__toggle">
+		<span></span>
+		</label>
 
-<div class="width">
-<h1><a href="sustaine.html">Sustaine</a></h1>
-<h2>Live Sustainably.</h2>
-<p>The general idea for my project is a website called Sustaine. As a New Yorker, I find it hard to find donation
-    locations a lot of the time and the donation locations that do exist don't really have a lot of information about
-    the charity, what we can donate, and other useful resources involving donations. I want to generate an Google Maps API that
-    compiles local NYC donations and charities where New Yorkers can drop off clothes and get a good idea of where their
-    old clothes are going as well as to promote sustainability in fashion and encourage charitability among users. </p>
-
-<div id="spacer"></div>
-
-<h2>Drop-Off Maps by Borough</h2>
-
-<div id="box">
-	<div class="borough">
-		<img src="images/nyc2.jpg" alt="nyc">
-		<a href="pages/manhattan.html"><h2><span class="space"></span><span class="dot"></span><span class="space"></span>Manhattan</h2></a>
-		<a href="pages/queens.html"><h2><span class="space"></span><span class="dot"></span><span class="space"></span>Queens</h2></a>
-		<a href="pages/brooklyn.html"><h2><span class="space"></span><span class="dot"></span><span class="space"></span>Brooklyn</h2></a>
-		<a href="pages/the-bronx.html"><h2><span class="space"></span><span class="dot"></span><span class="space"></span>The Bronx</h2></a>
-		<a href="pages/staten-island.html"><h2><span class="space"></span><span class="dot"></span><span class="space"></span>Staten Island</h2></a>
+		<ul class="menu__box">
+		<li><a class="menu__item" href="sustaine.html">Home</a></li>
+		<li><a class="menu__item" href="pages/about.html">About</a></li>
+		<li><a class="menu__item" href="pages/submit.html">Submit</a></li>
+		<li><a class="menu__item" href="pages/drop-off.html">Drop-Off</a></li>
+		<li><a class="menu__item" href="pages/mail-in.html">Mail-In</a></li>
+		<li><a class="menu__item" href="pages/pickup-services.html">Pickup Services</a></li>
+		<li><a class="menu__item" href="pages/research.html">Research</a></li>
+		<li><a class="menu__item" href="pages/progress.html">Progress</a></li>
+		<li><a class="menu__item" href="pages/contact.html">Contact</a></li>
+		</ul>
 	</div>
-</div>
+	<div class="width">
+		<div id="spacer"></div>
+		<h1><a href="sustaine.html">Sustaine</a></h1>
+		<h2>Live Sustainably.</h2>
+		<p>
+			Fast fashion is one of the largest contributers of waste, pollution, and global warming. One of the best ways to reduce waste in our landfills 
+			is by recycling and donating our unwanted clothes. NYC has hundreds of drop-off locations and resources for residents to donate their unwanted articles
+			(of clothing, shoes, accessories, and more!) and Sustaine's mission is to compile these resouces onto one easily-accessible site, in turn, reducing
+			the amount of waste in our landfills and slowing down the consequences of global warming.
+		</p>
 
-<div id="spacer"></div>
-<p>I added a marker in each borough for drop-off sites in NYC and will continue to research more drop-off location centers. I'm
-    also planning on including mailing donation information for people who would rather ship their donations instead of
-    going to their physical donation site. I'll be compiling a list of mailing addresses that accept donations and local
-    USPS offices. I also plan on making this project a bit more functional and have a search bar where users can enter in 
-    their ZIP codes and the map will show them their own local donation drop off sites, instead of the entire map of NYC,
-    and I also may include an option that allows people to mark a donation site that may not be listed on the map already.
-</p>
+		<h3>How Do You Want to Donate?</h3>
+
+		<div id="link-buttons">
+			<a href="pages/drop-off.html">
+				<div id="box2"><h2>Drop-Off</h2>
+			</div></a>
+			<a href="pages/mail-in.html">
+				<div id="box2"><h2>Mail-In</h2>
+			</div></a>
+			<a href="pages/pickup-services.html">
+				<div id="box2"><h2>Pick-Up Service</h2>
+			</div></a>
+		</div>
+
+		<div id="spacer"></div>
+		<p>I added a marker in each borough for drop-off sites in NYC and will continue to research more drop-off location centers. I'm
+			also planning on including mailing donation information for people who would rather ship their donations instead of
+			going to their physical donation site. I'll be compiling a list of mailing addresses that accept donations and local
+			USPS offices. I also plan on making this project a bit more functional and have a search bar where users can enter in 
+			their ZIP codes and the map will show them their own local donation drop off sites, instead of the entire map of NYC,
+			and I also may include an option that allows people to mark a donation site that may not be listed on the map already.
+		</p>
+	</div>
+	<div id="spacer"></div>
+	<script>    
+		function myFunction() {
+			if (window.pageYOffset >= sticky && screen.width < 700)  {
+			navbar.classList.add("sticky")
+			} else {
+			navbar.classList.remove("sticky");
+			}
+		}
+		
+		
+		window.onscroll = function() {myFunction()};
+		
+		var navbar = document.getElementById("navbar");
+		var sticky = navbar.offsetTop;
+
+	</script>
 </div>
-</div>
+<footer>
+	<small>Copyright &copy; 2022 Sustaine. All Rights Reserved</small> 
+</footer>
 </body>
 </html>

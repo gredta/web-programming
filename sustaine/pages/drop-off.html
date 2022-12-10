@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Sustaine</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css">
+<link rel="icon" type="image/x-icon" href="../images/favicon.png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<div class="header"></div>
+
+  <div id="navbar">
+    <a href="../sustaine.html">Home</a>
+	<div class="dropdown">
+		<button class="dropbtn">Boroughs
+		  <i class="fa fa-caret-down"></i>
+		</button>
+		<div class="dropdown-content">
+		  <a href="manhattan.html">Manhattan</a>
+		  <a href="queens.html">Queens</a>
+		  <a href="brooklyn.html">Brooklyn</a>
+		  <a href="the-bronx.html">The Bronx</a>
+		  <a href="staten-island.html">Staten Island</a>
+		</div>
+	  </div> 
+	  <div class="dropdown">
+        <div class="active">
+		<button class="dropbtn">Donate
+		  <i class="fa fa-caret-down"></i>
+		</button>
+    </div>
+		<div class="dropdown-content">
+		  <a href="drop-off.html">Drop-Off</a>
+		  <a href="mail-in.html">Mail-In</a>
+		  <a href="pickup-servicess.html">Pickup Services</a>
+		</div>
+	  </div> 
+    <a href="about.html">About</a>
+    <a href="submit.html">Submit</a>
+    <a href="research.html">Research</a>
+    <a href="progress.html">Progress</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <div class="content">
+  <div class="hamburger-menu">
+    <input id="menu__toggle" type="checkbox" />
+    <label class="menu__btn" for="menu__toggle">
+      <span></span>
+    </label>
+
+    <ul class="menu__box">
+      <li><a class="menu__item" href="../sustaine.html">Home</a></li>
+      <li><a class="menu__item" href="about.html">About</a></li>
+      <li><a class="menu__item" href="submit.html">Submit</a></li>
+	  <li><a class="menu__item" href="drop-off.html">Drop-Off</a></li>
+      <li><a class="menu__item" href="mail-in.html">Mail-In</a></li>
+      <li><a class="menu__item" href="pickup-services.html">Pickup Services</a></li>
+      <li><a class="menu__item" href="research.html">Research</a></li>
+      <li><a class="menu__item" href="progress.html">Progress</a></li>
+      <li><a class="menu__item" href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+
+<div class="width">
+<div id="spacer"></div>
+	<h1><a href="../sustaine.html">Sustaine</a></h1>
+	<h2>Drop-Off Locations</h2>
+
+	<div id="box">
+		<div class="borough">
+			<a href="manhattan.html"><button><h2>Manhattan</h2></button></a>
+			<a href="queens.html"><button><h2>Queens</h2></button></a>
+			<a href="brooklyn.html"><button><h2>Brooklyn</h2></button></a>
+			<a href="the-bronx.html"><button><h2>The Bronx</h2></button></a>
+			<a href="staten-island.html"><button><h2>Staten Island</h2></button></a>
+		</div>
+	</div>
+
+	<div id="spacer"></div>
+</div>
+</div>
+<script>    
+	function myFunction() {
+        if (window.pageYOffset >= sticky && screen.width < 700)  {
+        navbar.classList.add("sticky")
+        } else {
+        navbar.classList.remove("sticky");
+        }
+    }
+    
+    
+    window.onscroll = function() {myFunction()};
+    
+    var navbar = document.getElementById("navbar");
+    var sticky = navbar.offsetTop;
+
+</script>
+<div id="spacer"></div>
+<footer>
+	<small>Copyright &copy; 2022 Sustaine. All Rights Reserved</small> 
+</footer>
+</body>
+</html>

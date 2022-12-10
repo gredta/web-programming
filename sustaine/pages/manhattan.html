@@ -7,13 +7,8 @@
 <link rel="stylesheet" type="text/css" href="../style.css">
 <link rel="icon" type="image/x-icon" href="../images/favicon.png">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<!--<script src="script.js"></script>-->
-<!--<script src="script2.js"></script>-->
 </head>
 <body>
-
-<!-- Load an icon library to show a hamburger menu (bars) on small screens -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <div class="header">
 </div>
 
@@ -33,34 +28,66 @@
 		  <a href="staten-island.html">Staten Island</a>
 		</div>
 	  </div> 
+	  <div class="dropdown">
+		<button class="dropbtn">Donate
+		  <i class="fa fa-caret-down"></i>
+		</button>
+		<div class="dropdown-content">
+		  <a href="drop-off.html">Drop-Off</a>
+		  <a href="mail-in.html">Mail-In</a>
+		  <a href="pickup-servicess.html">Pickup Services</a>
+		</div>
+	  </div> 
     <a href="about.html">About</a>
     <a href="submit.html">Submit</a>
     <a href="research.html">Research</a>
     <a href="progress.html">Progress</a>
+	<a href="contact.html">Contact</a>
   </div>
   
+  <div class="content">
+  <div class="hamburger-menu">
+    <input id="menu__toggle" type="checkbox" />
+    <label class="menu__btn" for="menu__toggle">
+      <span></span>
+    </label>
+
+    <ul class="menu__box">
+      <li><a class="menu__item" href="../sustaine.html">Home</a></li>
+      <li><a class="menu__item" href="about.html">About</a></li>
+      <li><a class="menu__item" href="submit.html">Submit</a></li>
+	  <li><a class="menu__item" href="drop-off.html">Drop-Off</a></li>
+      <li><a class="menu__item" href="mail-in.html">Mail-In</a></li>
+      <li><a class="menu__item" href="pickup-services.html">Pickup Services</a></li>
+      <li><a class="menu__item" href="research.html">Research</a></li>
+      <li><a class="menu__item" href="progress.html">Progress</a></li>
+	  <li><a class="menu__item" href="contact.html">Contact</a></li>
+    </ul>
+  </div>
 
 <div class="width">
+<div id="spacer"></div>
 <h1><a href="sustaine.html">Sustaine</a></h1>
 
 <h2>Manhattan Drop-off Map</h2>
-<div id="map"></div>
+<div class="map">
+<div id="map"></div></div>
 </div>
 </div>
 <script>    
 function myFunction() {
-    if (window.pageYOffset >= sticky) {
-      navbar.classList.add("sticky")
-    } else {
-      navbar.classList.remove("sticky");
-    }
-  }
+	if (window.pageYOffset >= sticky && screen.width < 700)  {
+	navbar.classList.add("sticky")
+	} else {
+	navbar.classList.remove("sticky");
+	}
+}
 
 
- window.onscroll = function() {myFunction()};
-  
- var navbar = document.getElementById("navbar");
- var sticky = navbar.offsetTop;
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
 
  function initMap(){
 	//map options
@@ -78,7 +105,6 @@ function myFunction() {
 		position: {lat: 40.714003, lng: -73.858929},
 		map:map
 	});
-
 	//text popup info window
 	var infoWindow =  new google.maps.InfoWindow({
 		content: '<h1>HELPSY</h1>'
@@ -200,5 +226,10 @@ function myFunction() {
  </script>
     
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBOo0egIH6DL94gNcwfv4BNVhzHlujNGaE&callback=initMap"></script>
+<div id="spacer"></div>
+<div id="spacer"></div>
+<footer>
+	<small>Copyright &copy; 2022 Sustaine. All Rights Reserved</small> 
+</footer>
 </body>
 </html>
