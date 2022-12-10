@@ -392,7 +392,6 @@ a #box2:hover{
   font: inherit;
   background-color: inherit;
   margin: 0 auto;
-  transition-duration: .35s;
 }
 
 .navbar a:hover, .dropdown:hover .dropbtn {

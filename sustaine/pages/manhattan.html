@@ -15,6 +15,16 @@
 <div id="navbar">
     <a href="../sustaine.html">Home</a>
 	<div class="dropdown">
+		<button class="dropbtn">Donate
+		  <i class="fa fa-caret-down"></i>
+		</button>
+		<div class="dropdown-content">
+		  <a href="drop-off.html">Drop-Off</a>
+		  <a href="mail-in.html">Mail-In</a>
+		  <a href="pickup-servicess.html">Pickup Services</a>
+		</div>
+	  </div> 
+	<div class="dropdown">
 		<div class="active">
 		<button class="dropbtn">Boroughs
 		  <i class="fa fa-caret-down"></i>
@@ -26,16 +36,6 @@
 		  <a href="brooklyn.html">Brooklyn</a>
 		  <a href="the-bronx.html">The Bronx</a>
 		  <a href="staten-island.html">Staten Island</a>
-		</div>
-	  </div> 
-	  <div class="dropdown">
-		<button class="dropbtn">Donate
-		  <i class="fa fa-caret-down"></i>
-		</button>
-		<div class="dropdown-content">
-		  <a href="drop-off.html">Drop-Off</a>
-		  <a href="mail-in.html">Mail-In</a>
-		  <a href="pickup-servicess.html">Pickup Services</a>
 		</div>
 	  </div> 
     <a href="about.html">About</a>
@@ -76,7 +76,7 @@
 </div>
 <script>    
 function myFunction() {
-	if (window.pageYOffset >= sticky && screen.width < 700)  {
+	if (window.pageYOffset >= sticky)  {
 	navbar.classList.add("sticky")
 	} else {
 	navbar.classList.remove("sticky");

@@ -15,6 +15,16 @@
 <div id="navbar">
     <a class="active" href="sustaine.html">Home</a>
 	<div class="dropdown">
+		<button class="dropbtn">Donate
+		  <i class="fa fa-caret-down"></i>
+		</button>
+		<div class="dropdown-content">
+		  <a href="pages/drop-off.html">Drop-Off</a>
+		  <a href="pages/mail-in.html">Mail-In</a>
+		  <a href="pages/pickup-services.html">Pickup Services</a>
+		</div>
+	  </div> 
+	<div class="dropdown">
 		<button class="dropbtn">Boroughs
 		  <i class="fa fa-caret-down"></i>
 		</button>
@@ -24,16 +34,6 @@
 		  <a href="pages/brooklyn.html">Brooklyn</a>
 		  <a href="pages/the-bronx.html">The Bronx</a>
 		  <a href="pages/staten-island.html">Staten Island</a>
-		</div>
-	  </div> 
-	  <div class="dropdown">
-		<button class="dropbtn">Donate
-		  <i class="fa fa-caret-down"></i>
-		</button>
-		<div class="dropdown-content">
-		  <a href="pages/drop-off.html">Drop-Off</a>
-		  <a href="pages/mail-in.html">Mail-In</a>
-		  <a href="pages/pickup-services.html">Pickup Services</a>
 		</div>
 	  </div> 
     <a href="pages/about.html">About</a>
@@ -99,13 +99,12 @@
 	<div id="spacer"></div>
 	<script>    
 		function myFunction() {
-			if (window.pageYOffset >= sticky && screen.width < 700)  {
+			if (window.pageYOffset >= sticky)  {
 			navbar.classList.add("sticky")
 			} else {
 			navbar.classList.remove("sticky");
 			}
 		}
-		
 		
 		window.onscroll = function() {myFunction()};
 		
