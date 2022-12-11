@@ -129,6 +129,10 @@ table{
     display: none;
     padding-top: 0px;
   }
+  #box .borough a button h2{
+    padding: 5px;
+    vertical-align: middle
+  }
 }
 #spacer{
   margin: 0 auto;
@@ -392,6 +396,7 @@ a #box2:hover{
   font: inherit;
   background-color: inherit;
   margin: 0 auto;
+  transition-duration: .35s;
 }
 
 .navbar a:hover, .dropdown:hover .dropbtn {
@@ -598,14 +603,60 @@ here
     border-radius: 8px;
     justify-content: center;
     }
-}
-@media screen and (max-width:400px){
-  #box2{
-    margin: 0 auto;
-    text-align: center;
-    font-size: 10%;
-    overflow: hidden;
+    h1{
+      font-size: 45px;
     }
+    h2{
+      font-size: 18px;
+    }
+    h3{
+      font-size: 20px;
+    }
+    p{
+      font-size: 1em;
+    }
+    .width{
+      width: 80%;
+    }
+    #link-buttons a #box2 h2{
+      font-size: 25px;
+    }
+    #link-buttons a #box2{
+      width: 40%;
+      height: 80px;
+      margin: 20px;
+    }
+}
+@media screen and (max-width:450px){
+  #link-buttons a #box2 h2{
+    font-size: 23px;
+  }
+  #link-buttons a #box2{
+    width: 70%;
+    height: 80px;
+    margin: 15px;
+  }
+  #box{
+    width: 95%;
+  }
+}
+
+@media screen and (max-width:300px){
+  #link-buttons a #box2 h2{
+    font-size: 20px;
+  }
+  #link-buttons a #box2{
+    width: 40%;
+    height: 50px;
+    margin: 15px;
+    padding: 25px;
+  }
+  h1{
+    font-size: 40px;
+  }
+  #box .borough a button h2{
+    font-size: 20px;
+  }
 }
 
 footer {
@@ -648,7 +699,7 @@ textarea{
 input{
   margin: 10 auto;
   width: 90%;
-  padding-bottom: 10px;
+  padding-bottom: 0px;
 }
 
 input[type=submit]{
