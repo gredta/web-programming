@@ -21,7 +21,7 @@
 		<div class="dropdown-content">
 		  <a href="drop-off.html">Drop-Off</a>
 		  <a href="mail-in.html">Mail-In</a>
-		  <a href="pickup-servicess.html">Pickup Services</a>
+		  <a href="pickup-services.html">Pickup Services</a>
 		</div>
 	  </div> 
 	<div class="dropdown">
@@ -38,8 +38,6 @@
 	  </div>
     <a class="active" href="about.html">About</a>
     <a href="submit.html">Submit</a>
-    <a href="research.html">Research</a>
-    <a href="progress.html">Progress</a>
 	<a href="contact.html">Contact</a>
   </div>
 
@@ -58,8 +56,6 @@
 	  <li><a class="menu__item" href="drop-off.html">Drop-Off</a></li>
       <li><a class="menu__item" href="mail-in.html">Mail-In</a></li>
       <li><a class="menu__item" href="pickup-services.html">Pickup Services</a></li>
-      <li><a class="menu__item" href="research.html">Research</a></li>
-      <li><a class="menu__item" href="progress.html">Progress</a></li>
 	  <li><a class="menu__item" href="contact.html">Contact</a></li>
     </ul>
   </div>
@@ -74,26 +70,12 @@
 			encourage more sustainable practices in the fashion industry as well as encourage charitability among New Yorkers, as 
 			finding donation drop-off locations and information about them can often be a struggle.
 		</p>
-		<h2>Upcoming Changes & Additions</h2>
+		<h2>Why Sustainability Matters</h2>
+		<p id="demo"></p>
 		<p>
-			I plan to add at least 50 more markers in NYC and I'm thinking about adding a section on the site that's a drop-off
-			donation alternative for those who aren't able to visit a drop-off location and would rather ship off their donations to
-			a charity of their choice. To do this I'm going to compile a list of charities that accept mail-in donations and compile
-			donation pick-up resources for those who are unable to go to a drop-off location or the post office, which will be
-			part of my <a href="research.html">research</a>. I also plan on making this project a bit more interactive and collaborative,
-			so if users know of a drop-off location that's not included on my map, I want to build a feature that allows users to add
-			their own drop off location onto my map or submit their drop-off information to me and then I'll be able to add it to my
-			map.
-		</p>
-		<p>
-			I included a preliminary wireframe of what the page would look like with the different donation options.
-		</p>
-
-		<img src="../images/idea.png" width="100%">
-
-		<p>
-			The user would decide what they would rather do, drop-off, mail-in, or request a pickup service and select the buttons on the bottom
-			that would bring them to the next page with their desired resources.
+			Above, the ticking clock is a real-time countdown of the amount of time we have left until the effects of climate change
+			are irreversible. In America alone, an estimated 11.3 million tons of textile waste - equivalent to 85% of all textiles - end up 
+			in landfills on a yearly basis (<a href="https://earth.org/statistics-about-fast-fashion-waste/#:~:text=In%20America%20alone%2C%20an%20estimated,landfills%20on%20a%20yearly%20basis.">Source</a>).
 		</p>
 		</div>
 		</div>
@@ -202,6 +184,36 @@
 				}
 			}
 		}
+
+								// Set the date we're counting down to
+				var countDownDate = new Date("July 20, 2029 13:00:00").getTime();
+
+			// Update the count down every 1 second
+			var x = setInterval(function() {
+
+			// Get today's date and time
+			var now = new Date().getTime();
+				
+			// Find the distance between now and the count down date
+			var distance = countDownDate - now;
+				
+			// Time calculations for days, hours, minutes and seconds
+			var days = Math.floor(distance / (1000 * 60 * 60 * 24) % 365);
+			var years = Math.floor(distance / (1000 * 60 * 60 * 24) / 365);
+			var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+			var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+			var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+				
+			// Output the result in an element with id="demo"
+			document.getElementById("demo").innerHTML = years + " years " + days + " days " + "\n" + hours + "h " + minutes + "m " + seconds + "s ";
+				
+			// If the count down is over, write some text 
+			if (distance < 0) {
+				clearInterval(x);
+				document.getElementById("demo").innerHTML = "EXPIRED";
+			}
+			}, 1000);
+
 		</script>
 			
 		<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBOo0egIH6DL94gNcwfv4BNVhzHlujNGaE&callback=initMap"></script>
