@@ -38,6 +38,12 @@ useful site that compiled every resource (Drop-Off, Mail-In, Pick-Up) into one.
   due to the lack of resources.
   - I might create an API for the Pick-Up Services resources. The information on that page is completely static and it seems like a good place
   for more automation since the type of data in each block is the same.
+  - I also want to change a bunch of things for elements in the map itself, I would like to change the text in the pop-up window of each marker
+    and style it a bit nicer, as well as close the window when you click on another marker, since they all stay open if you keep clicking them.
+  
+## Sample Clips - Desktop Display
+
+## Sample Clips - Mobile Display
 
 
       
