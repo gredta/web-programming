@@ -6,10 +6,10 @@ I decided to go with this topic because of how difficult I thought it was to fin
 useful site that compiled every resource (Drop-Off, Mail-In, Pick-Up) into one.
 - Information Resources: 
   - I used several different resources for this topic and compiled my information from a bunch of websites including:
-      - https://www1.nyc.gov/assets/dsny/site/services/donate-goods
-      - https://www.newyorkcares.org/sites/default/files/images/u414831/Yearround-Clothing-Donations.pdf
-      - https://climateclock.world/
-      - https://happydonations.org/?zip=10021
+      - [https://www1.nyc.gov/assets/dsny/site/services/donate-goods](https://www1.nyc.gov/assets/dsny/site/services/donate-goods)
+      - [https://www.newyorkcares.org/sites/default/files/images/u414831/Yearround-Clothing-Donations.pdf](https://www.newyorkcares.org/sites/default/files/images/u414831/Yearround-Clothing-Donations.pdf)
+      - [https://climateclock.world/](https://climateclock.world/)
+      - [https://happydonations.org/?zip=10021](https://happydonations.org/?zip=10021)
 - What I Want To Change / Add:
   - I want to add more Mail-In resources, but unfortunately I couldn't find much more than one Mail-In Resource, so I only have on on that page.
   - I also think I might have too much information on one page and paragraphs that are too wordy and blocky on the page. I'm considering breaking
@@ -25,6 +25,7 @@ useful site that compiled every resource (Drop-Off, Mail-In, Pick-Up) into one.
   - I created an array of markers and looped through each marking using a for loop, like this:
   
   ![This is an image](https://github.com/gredta/web-programming/blob/main/sustaine/images/code.png)
+  - I also used [formspree](https://formspree.io/) to add the forms displayed on my Submit and Contact Pages.
 - How I Did It:
   - I decided to use an array of markers since I had a lot of data. I used this video for guidance and inspiration: https://www.youtube.com/watch?v=Zxf1mnP5zcw&ab_channel=TraversyMedia
   - I definitely feel a lot more comfortable using Google Developer Tools, it's much easier than I thought it would be and I want to continue working
