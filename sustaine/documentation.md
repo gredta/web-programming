@@ -24,7 +24,7 @@ useful site that compiled every resource (Drop-Off, Mail-In, Pick-Up) into one.
 - What I Did:
   - I created an array of markers and looped through each marking using a for loop, like this:
   
-  ![This is an image](https://github.com/gredta/web-programming/blob/main/sustaine/images/code.png)
+  ![code](https://github.com/gredta/web-programming/blob/main/sustaine/images/code.png)
   - I also used [formspree](https://formspree.io/) to add the forms displayed on my Submit and Contact Pages.
 - How I Did It:
   - I decided to use an array of markers since I had a lot of data. I used this video for guidance and inspiration: https://www.youtube.com/watch?v=Zxf1mnP5zcw&ab_channel=TraversyMedia
@@ -42,5 +42,14 @@ useful site that compiled every resource (Drop-Off, Mail-In, Pick-Up) into one.
     and style it a bit nicer, as well as close the window when you click on another marker, since they all stay open if you keep clicking them.
   
 ## Sample Clips - Desktop Display
+![desktop](https://github.com/gredta/web-programming/blob/main/sustaine/images/desktop.png)
+[desktop clip](https://github.com/gredta/web-programming/blob/main/sustaine/images/desktop.mov)
 
 ## Sample Clips - Mobile Display
+![mobile](https://github.com/gredta/web-programming/blob/main/sustaine/images/mobile.png)
+[mobile clip](https://github.com/gredta/web-programming/blob/main/sustaine/images/mobile.mov)
+
+## Early Wireframes
+![wireframe](https://github.com/gredta/web-programming/blob/main/sustaine/images/wireframe.png)
+![wireframe](https://github.com/gredta/web-programming/blob/main/sustaine/images/submit.png)
+![wireframe](https://github.com/gredta/web-programming/blob/main/sustaine/images/idea.png)
