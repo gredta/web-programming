@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Manhattan Drop-Off Map</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css">
+<link rel="icon" type="image/x-icon" href="../images/favicon.png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<div class="header">
+</div>
+
+<div id="navbar">
+    <a href="../sustaine.html">Home</a>
+	<div class="dropdown">
+		<button class="dropbtn">Donate
+		  <i class="fa fa-caret-down"></i>
+		</button>
+		<div class="dropdown-content">
+		  <a href="drop-off.html">Drop-Off</a>
+		  <a href="mail-in.html">Mail-In</a>
+		  <a href="pickup-services.html">Pickup Services</a>
+		</div>
+	  </div> 
+	<div class="dropdown">
+		<div class="active">
+		<button class="dropbtn">Boroughs
+		  <i class="fa fa-caret-down"></i>
+		</button>
+		</div>
+		<div class="dropdown-content">
+		  <a href="manhattan.html">Manhattan</a>
+		  <a href="queens.html">Queens</a>
+		  <a href="brooklyn.html">Brooklyn</a>
+		  <a href="the-bronx.html">The Bronx</a>
+		  <a href="staten-island.html">Staten Island</a>
+		</div>
+	  </div> 
+    <a href="about.html">About</a>
+    <a href="submit.html">Submit</a>
+	<a href="contact.html">Contact</a>
+  </div>
+  
+  <div class="content">
+  <div class="hamburger-menu">
+    <input id="menu__toggle" type="checkbox" />
+    <label class="menu__btn" for="menu__toggle">
+      <span></span>
+    </label>
+
+    <ul class="menu__box">
+      <li><a class="menu__item" href="../sustaine.html">Home</a></li>
+      <li><a class="menu__item" href="about.html">About</a></li>
+      <li><a class="menu__item" href="submit.html">Submit</a></li>
+	  <li><a class="menu__item" href="drop-off.html">Drop-Off</a></li>
+      <li><a class="menu__item" href="mail-in.html">Mail-In</a></li>
+      <li><a class="menu__item" href="pickup-services.html">Pickup Services</a></li>
+	  <li><a class="menu__item" href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+
+<div class="width">
+<div id="spacer"></div>
+<h1><a href="sustaine.html">Sustaine</a></h1>
+
+<h2>Manhattan Drop-off Map</h2>
+<div class="map">
+<div id="map"></div></div>
+</div>
+</div>
+<script>    
+function myFunction() {
+	if (window.pageYOffset >= sticky)  {
+	navbar.classList.add("sticky")
+	} else {
+	navbar.classList.remove("sticky");
+	}
+}
+
+
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+ function initMap(){
+	//map options
+	var options = {
+		zoom: 12,
+		center: {lat: 40.7831, lng: -73.9712} //nyc lat & lng
+	}
+	//new map
+	var map = new 
+	google.maps.Map(document.getElementById('map'), options);
+
+	/*
+	//add marker
+	var marker = new google.maps.Marker({
+		position: {lat: 40.714003, lng: -73.858929},
+		map:map
+	});
+	//text popup info window
+	var infoWindow =  new google.maps.InfoWindow({
+		content: '<h1>HELPSY</h1>'
+	})
+	//on click - shows text popup info window
+	marker.addListener('click', function(){
+		infoWindow.open(map, marker);
+	});
+	*/
+
+	//array of markers - add markers here
+	var markers = [
+		{
+			coords:{lat: 40.763755, lng: -73.961792},
+			content:'<h4>Vendor Name: Housing Works<br>Address: 1222 2 Ave<br>Phone: 347-473-7400<br>Email: info@housingworks.org<br>Website: https://www1.nyc.gov/assets/donate/site/Directory/Details/29/74<br>Accepting: Clothing, Shoes, Coats, Accessories</h4>'
+		},
+		{
+			coords:{lat: 40.745281, lng: -73.981419},
+			content:'<h4>Vendor Name: Grand Central Neighborhood Social Service Corporation<br>Address: 120 E 32 St<br>Phone: 212-883-0680<br>Email: gcnexec@gmail.com<br>Website: https://www1.nyc.gov/assets/donate/site/Directory/Details/434/497<br>Accepting: Clothing, Shoes, Coats, Accessories, Coats</h4>'
+		},
+		{
+			coords:{lat: 40.762645, lng: -73.995399},
+			content:'<h4>Vendor Name: The Salvation Army Of Greater New York<br>Address: 536 W 46 St<br>Phone: 800-728-7825<br>Email: Donations@salvationarmyusa.org<br>Website: https://www1.nyc.gov/assets/donate/site/Directory/Details/2/22<br>Accepting: Clothing, Shoes, Accessories, Coats, Bedding And Linens, Rugs</h4>'
+		},
+		{
+			coords:{lat: 40.740717, lng: -73.990601},
+			content:'<h4>Vendor Name: Eileen Fisher<br>Address: 166 5 Ave<br>Phone: 212-924-4777<br>Email: onlinesupport@eileenfisher.com<br>Website: https://www.eileenfisher.com/renew<br>Accepting: Only Eileen Fisher Clothing</h4>'
+		},
+		{
+			coords:{lat: 40.79, lng: -73.96908},
+			content:'<h4>Vendor Name: The Church of His Holiness<br>Address: 74 W 92 St<br>Phone: 929-392-0737<br>Email: churchofhisholiness@gmail.com<br>Website: https://www1.nyc.gov/assets/donate/site/Directory/Details/3521/1189<br>Accepting: Clothing, Shoes, Bedding And Linens, Coats, Accessories, Rugs, Towels</h4>'
+		},
+		{
+			coords:{lat: 40.7225111, lng: -73.999577},
+			content:'<h4>Vendor Name: Zara<br>Address: 500 5 Ave<br>Phone: 833-247-2473<br>Email: N/A<br>Website: https://www.zara.com/us/en/sustainability-collection-program-l1452.html<br>Accepting: They accept any kind of clothing, fabrics, household linens, footwear, accessories, and jewelry.</h4>'
+		},
+		{
+			coords:{lat: 40.704617, lng: -74.011232},
+			content:'<h4>Vendor Name: Urban Resource Institute<br>Address: 75 Broad Suite 505<br>Phone: 646-588-0030<br>Email: info@urinyc.org<br>Website: https://www1.nyc.gov/assets/donate/site/Directory/Details/439/502<br>Accepting: Clothing, Shoes, Bedding And Linens, Coats, Accessories</h4>'
+		},
+		{
+			coords:{lat: 40.823538, lng: -73.948635},
+			content:'<h4>Vendor Name: Queens Vintage Palace<br>Address: 1667 Amsterdam Ave<br>Phone: 917-309-5968<br>Email: qvpboutique@gmail.com<br>Website: https://www1.nyc.gov/assets/donate/site/Directory/Details/141/192<br>Accepting: Clothing, Shoes, Coats, Accessories</h4>'
+		},
+		{
+			coords:{lat: 40.862224, lng: -73.918497},
+			content:'<h4>Vendor Name: NYC Love Kitchen<br>Address: 3816 9 Ave<br>Phone: 212-942-42040<br>Email: contact@nyclovekitchen.com<br>Website: https://www1.nyc.gov/assets/donate/site/Directory/Details/2486/940<br>Accepting: Clothing, Shoes, Coats</h4>'
+		},
+		{
+			coords:{lat: 40.80317, lng: -73.9492},
+			content:'<h4>Vendor Name: Green Tree Textiles at Lenox Ave Harvest Home Farmers Market<br>Address: 151 Lenox Ave<br>Phone: 908-245-9300<br>Email: info@greentreetextiles.org<br>Website: https://www1.nyc.gov/assets/donate/site/Directory/Details/507/996<br>Accepting: Clothing, Shoes, Accessories, Bedding and linens, Towels, Coats</h4>'
+		},
+		{
+			coords:{lat: 40.780194, lng: -73.949598},
+			content:'<h4>Vendor Name: Housing Works<br>Address: 1730 2 Ave<br>Phone: 347-473-7400<br>Email: info@housingworks.org<br>Website: https://www1.nyc.gov/assets/donate/site/Directory/Details/29/63<br>Accepting: Clothing, Shoes, Coats, Accessories</h4>'
+		},
+		{
+			coords:{lat: 40.734208, lng: -73.981189},
+			content:'<h4>Vendor Name: Moravian Open Door, Inc<br>Address: 347 E 18 St<br>Phone: 212-995-5810<br>Email: info@moravianhouse.org<br>Website: https://www1.nyc.gov/assets/donate/site/Directory/Details/389/445<br>Accepting: Clothing, Shoes, Coats, Accessories</h4>'
+		},
+		{
+			coords:{lat: 40.732586, lng: -74.006704},
+			content:'<h4>Vendor Name: St. Lukes Thrift Shop<br>Address: 487 Hudson St Lower<br>Phone: 212-924-9364<br>Email: thriftshop487@yahoo.com<br>Website: https://www1.nyc.gov/assets/donate/site/Directory/Details/20/54<br>Accepting: Clothing, Shoes, Accessories</h4>'
+		},
+		{
+			coords:{lat: 40.7600369, lng: -73.976398},
+			content:'<h4>Vendor Name: Zara<br>Address: 1963 Broadway<br>Phone: 833-247-2473<br>Email: N/A<br>Website: https://www.zara.com/us/en/sustainability-collection-program-l1452.html<br>Accepting: They accept any kind of clothing, fabrics, household linens, footwear, accessories, and jewelry.</h4>'
+		},
+		{
+			coords:{lat: 40.7758185, lng: -73.961792},
+			content:'<h4>Vendor Name: Marine Layer<br>Address: 205 Columbus Ave<br>Phone: 646-998-5448<br>Email: help@marinelayer.com<br>Website: https://www.marinelayer.com/pages/respun<br>Accepting: They only accept T-shirts with the exception of any made of spandex. Can receive $5 credit for each tee up to $25.</h4>'
+		},
+		{
+			coords:{lat: 40.803882, lng: -73.961885},
+			content:'<h4>Vendor Name: Cathedral Community Cares<br>Address: 1047 Amsterdam Ave<br>Phone: 212-316-7583<br>Email: info@stjohndivine.org<br>Website: https://www1.nyc.gov/assets/donate/site/Directory/Details/2356/895<br>Accepting: Clothing, Shoes, Coats</h4>'
+		}
+
+	];
+
+	//loop through markers
+	for(var i = 0; i < markers.length; i++){
+		//add marker
+		addMarker(markers[i]);
+	}
+
+/*
+	addMarker({
+		coords:{lat: 40.714003, lng: -73.858929},
+		content:'<h3>Helpsy</h3>'
+	});
+*/
+	//add marker function
+	function addMarker(props){
+		var marker = new google.maps.Marker({
+			position: props.coords,
+			map:map,
+			//icon:props.iconImage
+		});
+
+		//check for custom icon
+		if(props.iconImage){
+			//set icon image
+			marker.setIcon(props.iconImage);
+		}
+
+		//check for content
+		if(props.content){
+			var infoWindow =  new google.maps.InfoWindow({
+				content:props.content
+			});
+			//on click - shows text popup info window
+			marker.addListener('click', function(){
+				infoWindow.open(map, marker);
+			});
+		}
+	}
+}
+
+ </script>
+    
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBOo0egIH6DL94gNcwfv4BNVhzHlujNGaE&callback=initMap"></script>
+<div id="spacer"></div>
+<div id="spacer"></div>
+<footer>
+	<small>Copyright &copy; 2022 Sustaine. All Rights Reserved</small> 
+</footer>
+</body>
+</html>
